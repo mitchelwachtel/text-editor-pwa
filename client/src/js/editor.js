@@ -27,7 +27,7 @@ console.log(`local storage: ${localData}`)
     getDb().then((res) => {
       const index = res.length;
       console.log(index);
-      const localIndex = localData.length;
+      // const localIndex = localData.length;
       // console.log(res[res.length-1].data);
       // console.log(localData);
       // console.log(header);
@@ -41,7 +41,7 @@ console.log(`local storage: ${localData}`)
         // console.log(res[0].data)
         this.editor.setValue(res[res.length-1].data);
       } 
-      else if (localIndex != 0) {
+      else if (localData != null) {
         console.log('localData.length is >0')
         this.editor.setValue(localData);
       }
